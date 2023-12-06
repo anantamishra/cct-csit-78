@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.top-menu {
+  background-color: #024f87;
+  display: flex;
+  padding: 12px 100px;
+  justify-content: space-between;
+}
+.top-menu p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
