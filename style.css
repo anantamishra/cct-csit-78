@@ -111,6 +111,11 @@
   background-color: #024f87;
 }
 
+.about-section {
+  display: flex;
+  gap: 25px;
+}
+
 @media screen and (max-width: 768px) {
   .top-menu {
     padding: 12px 20px;
