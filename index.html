@@ -10,18 +10,36 @@
 <body>
     <h1>Javascript</h1>
     <p> The sum is: </p>
-    <p>Sum here</p>
+    <h1 id="element1">Cars</h1>
+    <h1 id="element2">Bikes</h1>
 
 </body>
 <script>
 
-    function calculateSum(a, b) {
-        const c = a + b;
-        console.log("The value of A is", a);
-        console.log("The value of B is", b);
-        console.log("The sum is", c);
+
+    const cars = ["BMW", "Audi", "Mercedes", "Ferrari", "Lamborghini", "Bugatti", "Porsche", "Aston Martin", "Maserati", "Rolls Royce", "Bentley", "Jaguar", "Land Rover", "Lexus", "Tesla", "Volvo", "Volkswagen", "Toyota", "Honda", "Hyundai", "Kia", "Mazda", "Mitsubishi", "Nissan", "Subaru", "Suzuki", "Chevrolet", "Ford", "Jeep", "Dodge", "Ram", "GMC", "Cadillac", "Buick", "Lincoln", "Acura", "Infiniti", "Alfa Romeo", "Fiat", "Peugeot", "Renault", "Citroen", "Skoda", "Seat", "Dacia", "Opel", "Mini", "Smart", "Lada", "Ferrari", "Lamborghini", "Bugatti", "Porsche", "Aston Martin", "Maserati", "Rolls Royce", "Bentley", "Jaguar", "Land Rover", "Lexus", "Tesla", "Volvo", "Volkswagen", "Toyota", "Honda", "Hyundai", "Kia", "Mazda", "Mitsubishi", "Nissan", "Subaru", "Suzuki", "Chevrolet", "Ford", "Jeep", "Dodge", "Ram", "GMC", "Cadillac", "Buick", "Lincoln", "Acura", "Infiniti", "Alfa Romeo", "Fiat", "Peugeot", "Renault", "Citroen", "Skoda", "Seat", "Dacia", "Opel", "Mini", "Smart", "Lada"]
+
+    const bikes = {
+        name: "BMW",
+        model: "R 1250 GS",
+        color: "Black",
+        price: 2000000,
+        isAvailable: true,
+        owner: {
+            name: "Rahul",
+            age: 25,
+            address: {
+                city: "Bangalore",
+                state: "Karnataka",
+                country: "India"
+            }
+        }
     }
-    calculateSum(10, 20);
+    function getData() {
+        document.getElementById("element1").innerHTML = cars[15];
+        document.getElementById("element2").innerHTML = bikes.owner.address.city;
+    }
+    getData();
 
     // calculateSum1 = () => {
     //     const c = a + b;
