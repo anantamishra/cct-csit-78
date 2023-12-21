@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="blogTitle"></h1>
+        <p id="blogDescription"></p>
+        <p id="blogExcerpt"></p>
+        <p id="blogTags1"></p>
+        <p id="blogTags2"></p>
+        <p id="blogTags3"></p>
+        <p id="blogTags4"></p>
+        <p id="blogPublishedDate"></p>
+        <p id="blogPublishedBy"></p>
+        <p id="blogIsPublished"></p>
+    </div>
+
+</body>
+
+<script>
+    const blog = {
+        title: "My Blog",
+        description: "This is my blog",
+        excerpt: "This is my blog and this is the excerpt",
+        tags: ["blog", "javascript", "html", "css"],
+        publishedDate: "2020-06-01",
+        publishedBy: "Rahul",
+        isPublished: true
+    }
+
+    console.log(blog.title);
+    document.getElementById("blogTitle").innerHTML = `Blog Title: ${blog.title}`;
+    document.getElementById("blogDescription").innerHTML = blog.description;
+    document.getElementById("blogExcerpt").innerHTML = blog.excerpt;
+    document.getElementById("blogTags1").innerHTML = `Tag 1: ${blog.tags[0]}`;
+    document.getElementById("blogTags2").innerHTML = `Tag 2 : ${blog.tags[1]}`;
+    document.getElementById("blogTags3").innerHTML = `Tag 3: ${blog.tags[2]}`;
+    document.getElementById("blogTags4").innerHTML = `Tag 4: ${blog.tags[3]}`;
+    document.getElementById("blogPublishedBy").innerHTML = blog.publishedBy;
+    document.getElementById("blogPublishedDate").innerHTML = blog.publishedDate;
+    document.getElementById("blogIsPublished").innerHTML = blog.isPublished;
+
+
+</script>
+
+</html>
