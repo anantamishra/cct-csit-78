@@ -5,21 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
 </head>
 
-<body>
-
+<body class="flex justify-center items-center min-h-screen">
+    <div class="py-24 flex flex-col gap-6 px-10 bg-black container h-96 rounded-xl overflow-hidden">
+        <p class="bg-red-600 px-8 py-2 w-24 rounded-xl text-white" id="language">
+            Top
+        </p>
+        <h1 class="text-white text-3xl font-bold" id="title">Siper man no way home</h1>
+        <p class="text-white pr-36 text-lg" id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam,
+            voluptatum.Lorem
+            ipsum
+            dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quisquam, voluptatum.</p>
+        <div class="text-white flex gap-20">
+            <p id="release_date">2022</p>
+            <p id="rated">16+</p>
+            <p id="id2">1 Season</p>
+            <p id="id3">TV series</p>
+        </div>
+    </div>
 </body>
 
 <script>
-
     async function getMovies() {
-        const url = 'https://moviesdatabase.p.rapidapi.com/titles/series/%7BseriesId%7D';
+        const url = 'https://movies-tv-shows-database.p.rapidapi.com/?movieid=tt1375666';
         const options = {
             method: 'GET',
             headers: {
+                Type: 'get-movie-details',
                 'X-RapidAPI-Key': 'ade39a2102mshf1e18d449d11096p14fc9ejsn236b4440abc7',
-                'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+                'X-RapidAPI-Host': 'movies-tv-shows-database.p.rapidapi.com'
             }
         };
 
@@ -27,11 +45,25 @@
             const response = await fetch(url, options);
             const result = await response.json();
             console.log(result);
+            document.getElementById("language").innerHTML = result.language[0];
+            document.getElementById("title").innerHTML = result.title;
+            document.getElementById("description").innerHTML = result.description;
+            document.getElementById("release_date").innerHTML = result.release_date;
+            document.getElementById("id2").innerHTML = result.imdb_rating;
+            document.getElementById("id3").innerHTML = result.runtime;
+            document.getElementById("rated").innerHTML = result.rated;
+
         } catch (error) {
             console.error(error);
         }
     }
     getMovies();
+
 </script>
 
 </html>
+
+
+<!-- figma link -->
+
+<!-- https://www.figma.com/proto/5ZjA5orRHzEE7dPNQKPuGR/Filmberry---Online-movie-watching-web-site-(Community)?type=design&node-id=425-1837&t=CAfRKpBiywSJlnHK-0&scaling=min-zoom&page-id=425%3A919 -->
