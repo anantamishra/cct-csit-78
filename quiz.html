@@ -47,7 +47,7 @@
                 quiz.incorrect_answers.forEach(incorrectAnswer => {
                     options.push(incorrectAnswer);
                 });
-                options.sort(() => Math.random());
+                options.sort(() => Math.random() - 0.5);
 
                 // Append elements to blogDiv
                 quizDiv.appendChild(question).classList.add('quiz-title');
@@ -71,6 +71,8 @@
 
             // Append blogContainer to the body
             document.body.appendChild(quizContainer);
+
+            console.log(Math.random() + 0.5)
 
         });
 
