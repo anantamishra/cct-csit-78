@@ -1,0 +1,40 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1>Colleges</h1>
+    <div id="college-list">
+    </div>
+
+    <script>
+        const studentData = [
+            {
+                name: "Ram",
+                age: 20,
+                college: "SMC"
+            }, {
+                name: "Ram",
+                age: 20,
+                college: "CCT"
+            }, {
+                name: "Ram",
+                age: 20,
+                college: "Biredra"
+            }, {
+                name: "Ram",
+                age: 20,
+                college: "LICT"
+            }
+        ]
+
+        studentData.forEach(data => {
+            const collegeItem = document.createElement("p");
+            collegeItem.innerHTML = data.college;
+
+            document.getElementById("college-list").appendChild(collegeItem);
+        });
+    </script>
+</body>
+
+</html>
